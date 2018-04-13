@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
-    "getData": "parcel babel-node src/server/getData.js"
+    "getData": "babel-node src/server/getData.js"
   },
   "repository": {
     "type": "git",
