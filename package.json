@@ -1,0 +1,24 @@
+{
+  "name": "douban-trailer-mock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liangxiaoxin/douban-trailer-mock.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liangxiaoxin/douban-trailer-mock/issues"
+  },
+  "homepage": "https://github.com/liangxiaoxin/douban-trailer-mock#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0"
+  }
+}
