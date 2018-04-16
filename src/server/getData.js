@@ -4,6 +4,11 @@ import {sleep} from "../utils/utils";
 import uploadToQiniu from '../utils/qiniu'
 const URL = doubanUrl('T','0,10','经典,中国大陆,电影')
 
+import mongoose from 'mongoose'
+import movieModel from '../models/movie'
+
+mongoose.connect('mongodb://127.0.0.1:27017/douban')
+
 getData()
 
 async function getData() {
@@ -54,6 +59,9 @@ async function getData() {
     return links
   })
   console.log('movies',movies);
+  movieModel.insertMany(movies, () => {
+    console.log('写进数据库');
+  })
   browser.close()
 
   // 上传数据到七牛云
