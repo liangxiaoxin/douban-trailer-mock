@@ -9,8 +9,8 @@ const onerror = require('koa-onerror');
 const bodyparser = require('koa-bodyparser')();
 const logger = require('koa-logger');
 
-import index from './src/routers/index'
-
+const index = require('./src/routers/index')
+const movie = require('./src/routers/movie')
 // middlewares
 app.use(convert(bodyparser));
 app.use(convert(json()));
@@ -34,10 +34,9 @@ app.use(async (ctx, next) => {
 });
 
 router.use('/', index.routes(), index.allowedMethods());
-
+router.use('/api', movie.routes(), movie.allowedMethods());
 app.use(router.routes(), router.allowedMethods());
 // response
-
 app.on('error', function(err, ctx){
   console.log(err)
   log.error('server error', err, ctx);

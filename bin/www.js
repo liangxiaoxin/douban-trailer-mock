@@ -5,6 +5,8 @@
  */
 
 var app = require('../app');
+
+
 var debug = require('debug')('demo:server');
 var http = require('http');
 
@@ -12,7 +14,7 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '5001');
 // app.set('port', port);
 
 /**
@@ -25,7 +27,7 @@ var server = http.createServer(app.callback());
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(3000);
+server.listen(5001);
 server.on('error', onError);
 server.on('listening', onListening);
 

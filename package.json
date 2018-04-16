@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "babel-node ./bin/www",
+    "dev": "nodemon ./bin/www",
     "getData": "babel-node src/server/getData.js"
   },
   "repository": {
@@ -18,15 +18,6 @@
     "url": "https://github.com/liangxiaoxin/douban-trailer-mock/issues"
   },
   "homepage": "https://github.com/liangxiaoxin/douban-trailer-mock#readme",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
-    "babel-plugin-transform-es2015-parameters": "^6.24.1",
-    "babel-plugin-transform-es2015-spread": "^6.22.0",
-    "babel-plugin-transform-strict-mode": "^6.24.1"
-  },
   "dependencies": {
     "koa": "^2.5.0",
     "koa-bodyparser": "^2.0.1",
@@ -44,5 +35,19 @@
     "mongoose": "^5.0.14",
     "puppeteer": "^1.3.0",
     "qiniu": "^7.1.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-es2015-parameters": "^6.24.1",
+    "babel-plugin-transform-es2015-spread": "^6.22.0",
+    "babel-plugin-transform-strict-mode": "^6.24.1",
+    "koa-webpack-middleware": "^1.0.7",
+    "mocha": "^2.4.5",
+    "nodemon": "^1.9.1",
+    "should": "^8.3.0",
+    "supertest": "^1.2.0"
   }
 }
